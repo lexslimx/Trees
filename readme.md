@@ -12,4 +12,5 @@ left child = 2i+1
 right child = 2i+2
 parent = Floor((i-1)/2)
 
-
+Height of a tree
+The number of edges from the root to the lowest leaf.
