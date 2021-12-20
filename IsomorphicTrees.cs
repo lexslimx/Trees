@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class IsomorphicTrees{
     public bool IsSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null) return true;
@@ -6,6 +8,6 @@ public class IsomorphicTrees{
         
         if(p.val != q.val) return false;
         
-        return IsSameTree(p.left, q.left) && IsSameTree(p.right, q.right);
+        return IsSameTree(p.Left, q.right) && IsSameTree(p.right, q.right);
     }
 }
