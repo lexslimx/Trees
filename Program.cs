@@ -18,6 +18,8 @@ namespace Trees
             var ans =treeSerializer.serialize(tree);
 
             var desc = treeSerializer.deserialize(ans);
+
+            
             Console.WriteLine(ans);
         }
     }
