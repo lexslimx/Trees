@@ -9,18 +9,16 @@ namespace Trees
             TreeNode tree = new TreeNode(5);
             tree.Left = new TreeNode(4);
             tree.Left.Left = new TreeNode(4);
-            tree.Left.right = new TreeNode(3);
-            tree.right = new TreeNode(3);
-            tree.right.Left = new TreeNode(2);
-            tree.right.right = new TreeNode(1);
+            tree.Left.Right = new TreeNode(3);
+            tree.Right = new TreeNode(3);
+            tree.Right.Left = new TreeNode(2);
+            tree.Right.Right = new TreeNode(1);
 
-            LeafNodeSum fn = new LeafNodeSum();
-            var sum = fn.Sum(tree);
-            Console.WriteLine(sum);
+            TreeSerializer treeSerializer = new TreeSerializer();
+            var ans =treeSerializer.serialize(tree);
 
-            TreeHeight fnh = new TreeHeight();
-            var height = fnh.GetHeight(tree);
-            Console.WriteLine(height);
+            var desc = treeSerializer.deserialize(ans);
+            Console.WriteLine(ans);
         }
     }
 }

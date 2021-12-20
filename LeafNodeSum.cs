@@ -6,9 +6,9 @@ public class LeafNodeSum{
     }
     private int GetSum(TreeNode node, int currentSum){
         if(node == null) return 0;
-        if(node.Left == null && node.right == null) return node.val;
+        if(node.Left == null && node.Right == null) return node.val;
         currentSum += GetSum(node.Left, currentSum);
-        currentSum += GetSum(node.right, currentSum);
+        currentSum += GetSum(node.Right, currentSum);
         return currentSum;
     }
 }

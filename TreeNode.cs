@@ -1,6 +1,6 @@
 public class TreeNode{
     public TreeNode Left;
-    public TreeNode right;
+    public TreeNode Right;
     public int val;
     public TreeNode(int val)
     {

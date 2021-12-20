@@ -12,7 +12,7 @@ public class LowestCommonAncestor
             if(p.val < root.val && q.val < root.val) return LCA(root.Left, p, q);
 
             //if they are greater than the root search the right side
-            if(p.val > root.val && q.val > root.val) return LCA(root.right, p, q);
+            if(p.val > root.val && q.val > root.val) return LCA(root.Right, p, q);
 
             return root;
     }
@@ -27,24 +27,8 @@ public class LowestCommonAncestor
             if(p.val < root.val && q.val < root.val) return LCA(root.Left, p, q);
 
             //if they are greater than the root search the right side
-            if(p.val > root.val && q.val > root.val) return LCA(root.right, p, q);
+            if(p.val > root.val && q.val > root.val) return LCA(root.Right, p, q);
 
             return root;
-    }
-
-    private bool IsChild(TreeNode node, TreeNode P, TreeNode q)
-    {
-        if(node == null || node.val == P.val || node.val == q.val) return node;
-
-        if(node.val == P.val || node.val == q.val) return node; 
-
-        var leftLca = IsChild(node.Left, P, q);
-        var rightLca = IsChild(node.right, P, q);
-
-        if(leftLca != null && rightLca !=null) return node;
-
-        if(leftLca!=null)return leftLca;
-        if(rightLca!=null)return rightLca;
-
     }
 } 

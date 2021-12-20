@@ -8,6 +8,6 @@ public class IsomorphicTrees{
         
         if(p.val != q.val) return false;
         
-        return IsSameTree(p.Left, q.right) && IsSameTree(p.right, q.right);
+        return IsSameTree(p.Left, q.Right) && IsSameTree(p.Right, q.Right);
     }
 }
